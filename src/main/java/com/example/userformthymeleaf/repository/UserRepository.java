@@ -27,4 +27,21 @@ public class UserRepository {
     }
 
 
+    public User getUserById(int userId) {
+        for(User user : users){
+            if(user.getUserId() == userId){
+                return user;
+            }
+        }
+        return null;
+    }
+
+    public void updateUser(User user) {
+        for(User oldUser : users){
+            if(oldUser.getUserId() == user.getUserId()){
+                users.remove(oldUser);
+                users.add(user);
+            }
+        }
+    }
 }

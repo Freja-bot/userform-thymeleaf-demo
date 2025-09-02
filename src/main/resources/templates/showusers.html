@@ -15,6 +15,7 @@
         <td th:text="${user.name}"></td>
         <td th:text="${user.email}"></td>
         <td th:text="${user.userRole}"></td>
+        <td><a class="linkToButton" th:href="@{/user/edit/{userId}(userId=${user.userId})}" >Edit</a></td>
     </tr>
 </table>
 
